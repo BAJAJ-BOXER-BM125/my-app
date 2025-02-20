@@ -4,6 +4,7 @@ import "./globals.css";
 
 
 
+
 const nunito = Nunito({
   subsets: ["cyrillic"],
   variable: "--font-nunito",
@@ -23,8 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={nunito.className}>
           <main className="min-h-screen">
-          </main>
+          {/* <Header/> */}
         {children}
+        </main>
       </body>
     </html>
   );
