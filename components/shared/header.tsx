@@ -28,6 +28,8 @@ export const Header: React.FC<Props> = ({ className }) => {
                     <div>
                         <Button variant='outline' className=''><ShoppingCart size={13}/></Button>
                     </div>
+                    <div>
+                    </div>
                 </div>
             </Container>
         </header>
