@@ -1,5 +1,7 @@
 import clsx from "clsx";
 import React from "react";
+import { Button } from '../ui/button';
+import { ShoppingCart, User, UserRound } from 'lucide-react';
 
 type TitleSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
@@ -19,8 +21,21 @@ const mapTagBySize = {
     '2xl' : 'h1',
 } as const;
 
+const mapClassNameBySize = {
+    xs: 'text-[16px]',
+    sm: 'text-[22px]',
+    md: 'text-[26px]',
+    lg: 'text-[32px]',
+    xl: 'text-[40px]',
+    '2xl': 'text-[48px]',
+} as const;
+
 return React.createElement(
     mapTagBySize[size],
-    { className: clsx(mapClassNameBySize[size], className)}
-)
-};
+    { className: clsx(mapClassNameBySize[size], className) },
+    text,
+    <div>
+        <Button variant='outline' className=''><ShoppingCart size={13}/></Button>
+    </div>
+);
+};    
